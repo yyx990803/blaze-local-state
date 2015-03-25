@@ -7,7 +7,7 @@ Blaze.Template.prototype.localState = function (stateGetter) {
       return self.__stateVars[key].get();
     });
   });
-  template.onCreated(function () {
+  template._callbacks.created.push(function () {
     var self = this;
     self.__stateVars = self.__stateVars || {};
     var initialState = stateGetter();

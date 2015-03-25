@@ -2,12 +2,12 @@ Package.describe({
   name: 'evanyou:local-state',
   version: '0.0.1',
   summary: 'Local state for Blaze Templates',
-  git: '',
+  git: 'https://github.com/yyx990803/blaze-local-state',
   documentation: 'README.md'
 });
 
 Package.onUse(function(api) {
-  api.versionsFrom('1.0.4.2');
+  api.versionsFrom('1.0');
   api.use([
     'underscore',
     'blaze',
@@ -18,6 +18,6 @@ Package.onUse(function(api) {
 
 Package.onTest(function(api) {
   api.use('tinytest');
-  api.use('local-state');
+  api.use('evanyou:local-state');
   api.addFiles('local-state-tests.js');
 });
